@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beauty Haven Pakistan - Your premier online beauty store offering authentic makeup, skincare, haircare & more. Free delivery on orders above PKR 2500!">
+    <meta name="keywords" content="beauty products pakistan, makeup online, skincare, cosmetics, beauty store">
+    <title>Beauty Haven Pakistan - Your Beauty Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <span><i class="fas fa-gift"></i> New Year Special: Extra 15% Off on First Order | Use Code: NEWYEAR2025</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="brand-logo">
+                    <h1><i class="fas fa-star"></i> Beauty Haven</h1>
+                    <span class="tagline">Your Beauty Store</span>
+                </div>
+
+                <!-- Search Section -->
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="Search for lipstick, serum, mascara...">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="#" class="action-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#" class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="action-badge">0</span>
+                    </a>
+                    <a href="#" class="action-btn cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="action-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#makeup">Makeup</a></li>
+                <li><a href="#skincare">Skincare</a></li>
+                <li><a href="#haircare">Hair Care</a></li>
+                <li><a href="#bathbody">Body Care</a></li>
+                <li><a href="#tools">Tools & Brushes</a></li>
+                <li><a href="#deals" class="deals-link">?? Hot Deals</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner" id="home">
+        <div class="container">
+            <div class="hero-content-wrapper">
+                <div class="hero-text">
+                    <span class="hero-badge">Winter Collection 2025</span>
+                    <h2 class="hero-heading">Unleash Your Inner Glow</h2>
+                    <p class="hero-description">Discover premium beauty essentials that transform your routine. From luxe lipsticks to nourishing serums - we've got everything you need.</p>
+                    <div class="hero-features">
+                        <span><i class="fas fa-check-circle"></i> 100% Authentic</span>
+                        <span><i class="fas fa-check-circle"></i> Free Shipping PKR 2500+</span>
+                        <span><i class="fas fa-check-circle"></i> Easy Returns</span>
+                    </div>
+                    <button class="hero-cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+                        Explore Collection <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Free shipping on orders above PKR 2500</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-badge-check"></i>
+                    </div>
+                    <h3>Authentic Products</h3>
+                    <p>100% genuine brands guaranteed</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help you</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rotate-left"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>Hassle-free 7-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Find exactly what you're looking for</p>
+            </div>
+
+            <div class="categories-showcase">
+                <div class="category-item" onclick="scrollToProducts('makeup')">
+                    <div class="category-visual">
+                        <i class="fas fa-paintbrush"></i>
+                    </div>
+                    <h3>Makeup</h3>
+                    <p>Lipsticks, Foundations, Eyeshadows</p>
+                </div>
+                <div class="category-item" onclick="scrollToProducts('skincare')">
+                    <div class="category-visual">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h3>Skincare</h3>
+                    <p>Serums, Moisturizers, Cleansers</p>
+                </div>
+                <div class="category-item" onclick="scrollToProducts('haircare')">
+                    <div class="category-visual">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Hair Care</h3>
+                    <p>Shampoos, Oils, Hair Masks</p>
+                </div>
+                <div class="category-item" onclick="scrollToProducts('bathbody')">
+                    <div class="category-visual">
+                        <i class="fas fa-soap"></i>
+                    </div>
+                    <h3>Body Care</h3>
+                    <p>Lotions, Body Wash, Scrubs</p>
+                </div>
+                <div class="category-item" onclick="scrollToProducts('tools')">
+                    <div class="category-visual">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Tools & Brushes</h3>
+                    <p>Makeup Tools, Accessories</p>
+                </div>
+                <div class="category-item" onclick="scrollToProducts('fragrance')">
+                    <div class="category-visual">
+                        <i class="fas fa-spray-can-sparkles"></i>
+                    </div>
+                    <h3>Fragrances</h3>
+                    <p>Perfumes, Body Mists</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Products</h2>
+                <p>Most loved by our customers</p>
+            </div>
+
+            <div class="products-showcase">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-labels">
+                        <span class="label-sale">-35%</span>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&h=500&fit=crop" alt="Luxury Lipstick Set" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Makeup</span>
+                        <h3 class="product-title">Luxury Matte Lipstick Set</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="reviews-count">(284)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 1,950</span>
+                            <span class="price-old">PKR 3,000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <div class="product-labels">
+                        <span class="label-new">New</span>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=500&fit=crop" alt="Vitamin C Serum" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Skincare</span>
+                        <h3 class="product-title">Radiance Vitamin C Serum</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews-count">(412)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 2,799</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item">
+                    <div class="product-labels">
+                        <span class="label-sale">-40%</span>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=500&fit=crop" alt="Professional Makeup Brushes" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Tools</span>
+                        <h3 class="product-title">Professional Brush Set (12pcs)</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews-count">(198)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 2,400</span>
+                            <span class="price-old">PKR 4,000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=500&h=500&fit=crop" alt="Hair Repair Oil" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Hair Care</span>
+                        <h3 class="product-title">Argan Oil Hair Treatment</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="reviews-count">(156)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 1,650</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-item">
+                    <div class="product-labels">
+                        <span class="label-sale">-25%</span>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1556229010-aa9e5d93ae8c?w=500&h=500&fit=crop" alt="HD Foundation" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Makeup</span>
+                        <h3 class="product-title">HD Full Coverage Foundation</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="reviews-count">(329)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 2,250</span>
+                            <span class="price-old">PKR 3,000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-item">
+                    <div class="product-labels">
+                        <span class="label-new">New</span>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=500&h=500&fit=crop" alt="Body Butter" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Body Care</span>
+                        <h3 class="product-title">Shea Butter Body Cream</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews-count">(267)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 1,299</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-item">
+                    <div class="product-labels">
+                        <span class="label-sale">-30%</span>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=500&h=500&fit=crop" alt="Face Mask Set" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Skincare</span>
+                        <h3 class="product-title">Hydrating Sheet Mask Set</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="reviews-count">(145)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 1,050</span>
+                            <span class="price-old">PKR 1,500</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1583241800698-c949e8e2e148?w=500&h=500&fit=crop" alt="Eyeshadow Palette" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Makeup</span>
+                        <h3 class="product-title">Nude Eyeshadow Palette</h3>
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="reviews-count">(392)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="price-current">PKR 3,299</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Deals Section -->
+    <section class="flash-deals-section" id="deals">
+        <div class="container">
+            <div class="deals-header">
+                <div>
+                    <h2><i class="fas fa-bolt"></i> Flash Sale</h2>
+                    <p>Hurry! Limited time offers</p>
+                </div>
+                <div class="timer-display" id="dealTimer">
+                    <div class="timer-unit">
+                        <span id="timerDays">00</span>
+                        <small>Days</small>
+                    </div>
+                    <div class="timer-unit">
+                        <span id="timerHours">00</span>
+                        <small>Hours</small>
+                    </div>
+                    <div class="timer-unit">
+                        <span id="timerMins">00</span>
+                        <small>Mins</small>
+                    </div>
+                    <div class="timer-unit">
+                        <span id="timerSecs">00</span>
+                        <small>Secs</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deals-showcase">
+                <div class="deal-banner mega-deal">
+                    <div class="deal-content">
+                        <span class="deal-tag">Weekend Special</span>
+                        <h3>Buy 2 Get 1 Free</h3>
+                        <p>On all lipsticks & glosses</p>
+                        <button class="deal-action-btn">Shop Now</button>
+                    </div>
+                </div>
+
+                <div class="deal-banner premium-deal">
+                    <div class="deal-content">
+                        <span class="deal-tag">Premium Brands</span>
+                        <h3>Up to 50% Off</h3>
+                        <p>Luxury skincare products</p>
+                        <button class="deal-action-btn">View Deals</button>
+                    </div>
+                </div>
+
+                <div class="deal-banner bundle-deal">
+                    <div class="deal-content">
+                        <span class="deal-tag">Bundle Offer</span>
+                        <h3>Makeup Kit Sale</h3>
+                        <p>Complete sets at 40% discount</p>
+                        <button class="deal-action-btn">Explore Kits</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-info">
+                    <h2>Join Our Beauty Community</h2>
+                    <p>Subscribe for exclusive deals, beauty tips, and early access to new launches!</p>
+                    <ul class="newsletter-perks">
+                        <li><i class="fas fa-check"></i> 10% off your first order</li>
+                        <li><i class="fas fa-check"></i> Weekly beauty tips & tutorials</li>
+                        <li><i class="fas fa-check"></i> Early access to sales</li>
+                    </ul>
+                </div>
+                <div class="newsletter-form-wrapper">
+                    <form class="newsletter-form" id="subscribeForm">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe Now</button>
+                    </form>
+                    <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand-section">
+                    <h3><i class="fas fa-star"></i> Beauty Haven</h3>
+                    <p>Pakistan's most trusted online beauty destination. We curate the finest selection of authentic beauty products to help you look and feel your best.</p>
+                    <p style="margin-top: 16px; font-weight: 600; color: #fff;"><i class="fas fa-user-circle"></i> Founded by: Izhar Khan</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#makeup">Makeup</a></li>
+                        <li><a href="#skincare">Skincare</a></li>
+                        <li><a href="#haircare">Hair Care</a></li>
+                        <li><a href="#deals">Special Offers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return & Refund</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +92117700104</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9818c858586a98e85888481889f8c87c79982">[email&#160;protected]</a></li>
+                        <li><i class="fas fa-location-dot"></i> swat, Pakistan</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 10AM - 7PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Beauty Haven. All Rights Reserved. | Owned by Izhar Khan</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
